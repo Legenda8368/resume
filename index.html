@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Резюме — Олександр Ведющенко</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #f0f0f0;
+      overflow: hidden;
+    }
+
+    .loader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: #1f1c2c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #00ffe0;
+      border-top: 5px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .container.loaded {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.2em;
+      color: #00ffe0;
+      transition: color 0.3s;
+    }
+
+    h2 {
+      border-left: 4px solid #00ffe0;
+      padding-left: 10px;
+      color: #ffffff;
+      margin-top: 2em;
+    }
+
+    p, li {
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #00ffe0;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #ffffff;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header p {
+      margin: 6px 0;
+    }
+
+    .highlight {
+      color: #00ffe0;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Resume -->
+  <div class="container" id="content">
+    <div class="header">
+      <h1>Олександр Ведющенко</h1>
+      <p><span class="highlight">Веброзробник / Верстальник</span></p>
+      <p>📍 Звенигородка, Черкаська область</p>
+      <p>📞 +380502279063 | 📧 best5legend2024@gmail.com</p>
+      <p>🔗 Telegram: <a href="https://t.me/oleksandr_dev09">@oleksandr_dev09</a></p>
+    </div>
+
+    <h2>🎯 Ціль</h2>
+    <p>Шукаю можливість реалізувати свої навички в адаптивній верстці, HTML/CSS-розробці та роботі з платформами Tilda/WordPress у команді, що прагне якісного результату.</p>
+
+    <h2>🛠️ Навички</h2>
+    <ul>
+      <li>HTML5 / CSS3 / SCSS — адаптивна та кросбраузерна верстка</li>
+      <li>JavaScript (базовий рівень) — інтерактивність, прості скрипти</li>
+      <li>Tilda / Zero Block — створення лендингів, кастомізація блоків</li>
+      <li>WordPress — верстка блоків, встановлення плагінів, налаштування</li>
+      <li>Figma — впевнене читання та верстка за макетами</li>
+      <li>Оптимізація швидкості сайту — стиснення зображень, lazy loading, шрифти</li>
+    </ul>
+
+    <h2>💼 Досвід</h2>
+    <p><strong>Фриланс-проекти</strong><br>
+    Веброзробник / Верстальник</p>
+    <ul>
+      <li>Верстка адаптивних сайтів за макетами з Figma</li>
+      <li>Робота з клієнтами через Telegram, підбір рішень під задачі</li>
+      <li>Доопрацювання сайтів, тестування, виправлення багів</li>
+    </ul>
+
+    <h2>🎓 Освіта</h2>
+    <p>Самоосвіта у сфері веброзробки</p>
+
+    <h2>💬 Про себе</h2>
+    <p>Уважний до деталей, швидко навчаюсь, люблю доводити проєкти до ідеалу. Працюю з ентузіазмом і націлений на результат. Готовий до співпраці та тестового завдання.</p>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('content').classList.add('loaded');
+      document.body.style.overflow = 'auto';
+    });
+  </script>
+</body>
+</html>
